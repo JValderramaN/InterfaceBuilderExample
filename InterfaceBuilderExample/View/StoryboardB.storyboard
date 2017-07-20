@@ -19,23 +19,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Controlador B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqO-0b-b3h">
-                                <rect key="frame" x="134" y="323" width="106.5" height="21"/>
+                                <rect key="frame" x="134" y="35" width="106.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-fB-Dlf">
+                                <rect key="frame" x="15" y="128" width="345" height="469"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYi-dr-Jy4">
+                                <rect key="frame" x="15" y="81" width="67.5" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-e6-5ss">
+                                <rect key="frame" x="152" y="612" width="70" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Request"/>
+                                <connections>
+                                    <action selector="requestButtonTapped:" destination="AAK-Wz-siQ" eventType="touchUpInside" id="DG4-xf-spp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DqO-0b-b3h" firstAttribute="centerY" secondItem="FFm-SX-X2N" secondAttribute="centerY" id="6Ri-mp-rrk"/>
+                            <constraint firstItem="hfJ-fB-Dlf" firstAttribute="leading" secondItem="wYi-dr-Jy4" secondAttribute="leading" id="5d9-yu-5tt"/>
+                            <constraint firstItem="dKr-Cc-4Fe" firstAttribute="trailing" secondItem="hfJ-fB-Dlf" secondAttribute="trailing" constant="15" id="89f-EP-7Sk"/>
+                            <constraint firstItem="wYi-dr-Jy4" firstAttribute="leading" secondItem="dKr-Cc-4Fe" secondAttribute="leading" constant="15" id="8yd-re-KNj"/>
+                            <constraint firstItem="0Ib-e6-5ss" firstAttribute="centerX" secondItem="FFm-SX-X2N" secondAttribute="centerX" id="DV2-vB-97v"/>
+                            <constraint firstItem="wYi-dr-Jy4" firstAttribute="top" secondItem="DqO-0b-b3h" secondAttribute="bottom" constant="25" id="F3p-of-99j"/>
+                            <constraint firstItem="DqO-0b-b3h" firstAttribute="top" secondItem="dKr-Cc-4Fe" secondAttribute="top" constant="15" id="Ohu-LL-AdE"/>
+                            <constraint firstItem="dKr-Cc-4Fe" firstAttribute="bottom" secondItem="0Ib-e6-5ss" secondAttribute="bottom" constant="20" id="X1M-Q7-k6d"/>
                             <constraint firstItem="DqO-0b-b3h" firstAttribute="centerX" secondItem="FFm-SX-X2N" secondAttribute="centerX" id="p4y-kf-Xyb"/>
+                            <constraint firstItem="hfJ-fB-Dlf" firstAttribute="top" secondItem="wYi-dr-Jy4" secondAttribute="bottom" constant="30" id="xCZ-xG-ADu"/>
+                            <constraint firstItem="0Ib-e6-5ss" firstAttribute="top" secondItem="hfJ-fB-Dlf" secondAttribute="bottom" constant="15" id="xOJ-4k-Zoa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dKr-Cc-4Fe"/>
                     </view>
+                    <connections>
+                        <outlet property="jsonTextView" destination="hfJ-fB-Dlf" id="1s3-bt-Mjl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faX-A6-cRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="122"/>
+            <point key="canvasLocation" x="-162.40000000000001" y="121.88905547226388"/>
         </scene>
     </scenes>
 </document>

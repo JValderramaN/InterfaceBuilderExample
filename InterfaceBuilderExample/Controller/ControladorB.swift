@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Alamofire
 
 class ControladorB: UIViewController {
 
+    @IBOutlet weak var jsonTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +24,16 @@ class ControladorB: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func requestButtonTapped(_ sender: UIButton) {
+        // SOLICITUD DEL JSON: https://www.reddit.com/top/.json
+        let url = "https://www.reddit.com/top/.json"
+        
+        Alamofire.request(url).responseString { (data) in
+            print("callback del request")
+            print(data)
+            self.jsonTextView.text = data.value
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        print("luego del request")
     }
-    */
-
 }
